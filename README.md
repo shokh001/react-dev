@@ -192,3 +192,33 @@ React Hooks - bu ishlab chiquvchilarga React komponentlarida holat va hayot ayla
       return [state, setState];
    } 
    </pre>
+
+30. **PureComponent** Oddiy Componentga o'xshaydi, lekin u bir xil props va state uchun re-renderni o'tkazib yuboradi. Sinf komponentlari hali ham React tomonidan qo'llab-quvvatlanadi, ammo biz ularni yangi kodda ishlatishni tavsiya etmaymiz.
+
+31. **Shadow DOM va Virtual DOM farqi?**
+  * Shadow DOM brauzer texnologiyasi bo'lib, asosan veb-komponentlardagi o'zgaruvchilar va CSS-ni aniqlash uchun mo'ljallangan. Virtual DOM - bu JavaScript-dagi kutubxonalar tomonidan brauzer API-lari ustida amalga oshirilgan kontseptsiya.
+
+ 
+32. **16.3+ versiyadan oldin:**
+    <img src='https://github.com/sudheerj/reactjs-interview-questions/blob/master/images/phases16.4.png' alt=''/>
+
+33. **16.3 versiyadan oldin:**
+    <img src='https://github.com/sudheerj/reactjs-interview-questions/raw/master/images/phases.png' alt='' /> 
+
+34. **Portal** - bu asosiy komponentning DOM ierarxiyasidan tashqarida mavjud bo'lgan DOM tuguniga bolalarni ko'rsatishning tavsiya etilgan usuli.
+    
+   <pre>ReactDOM.createPortal(child, container)</pre>
+
+35. **React v16 da Error Boundary qanday?**
+   Error Boundary - JavaScript xatolarini bolalar komponentlar daraxtining istalgan joyida ushlaydigan, bu xatolarni qayd etadigan va buzilgan komponentlar daraxti o'rniga zaxira foydalanuvchi interfeysini ko'rsatadigan komponentlar.
+
+36. **Key sifatida indexni berishning tasiri.** 
+   Agar siz noyob kalit uchun element ma'lumotlaridan foydalansangiz, todo.id ushbu ro'yxatga xos va barqaror deb hisoblasangiz, React elementlarni qayta ko'rib chiqishga hojat qoldirmasdan qayta tartiblashi mumkin bo'ladi.
+
+37. **Komponentni setStateni chaqirmasdan re-render qilishda majbur qila olasizmi?**
+   Odatiy bo'lib, komponentingiz state yoki props o'zgarganda, komponentingiz re-render buladi. Agar render() method boshqa maʼlumotlarga bogʻliq boʻlsa, forceUpdate()ni chaqirib, Reactga komponentni re-ender kerakligini aytishingiz mumkin.
+   
+   ```component.forceUpdate(callback);```
+
+38. **Redux-saga va redux-thunk o'rtasidagi farqlar qanday?**
+   Redux Thunk ham, Redux Saga ham nojo'ya ta'sirlarni bartaraf etishda g'amxo'rlik qiladi. Ko'pgina stsenariylarda Thunk ular bilan shug'ullanish uchun va'dalardan foydalanadi, Saga esa Generatorlardan foydalanadi. Thunk-dan foydalanish oson va Promises ko'plab ishlab chiquvchilarga tanish, Sagas/Generatorlar kuchliroq, ammo siz ularni o'rganishingiz kerak bo'ladi. Ammo ikkala o'rta dastur birgalikda mavjud bo'lishi mumkin, shuning uchun siz Thunks bilan boshlashingiz va kerak bo'lganda/agar kerak bo'lsa, Sagas bilan tanishishingiz mumkin.
